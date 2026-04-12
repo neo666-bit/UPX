@@ -1,0 +1,46 @@
+@media screen and (max-width: 760px){
+
+    main {
+        flex-direction: column;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header, .reserv-btn, .text, article {
+        margin: 0 auto;
+    }
+
+    .text {
+        font-size: 32px;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    article {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .placas {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    article::after {
+        right: 50%;
+        transform: translateX(50%);
+        width: 250px;
+        height: 40px;
+    }
+
+    #title ul {
+        flex-direction: column;
+    }
+
+    li {
+        margin: 10px;
+    }
+}

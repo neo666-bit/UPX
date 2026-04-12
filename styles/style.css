@@ -1,0 +1,146 @@
+body {
+    background: 
+        radial-gradient(circle at 75% 25%, rgba(24,129,209,0.5), transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(0,80,145,0.2), transparent 60%),
+        #000c14;
+    background-attachment: fixed;
+    color: white;
+    font-family: poppinsregular;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: -105px;
+    margin-left: -120px;
+}
+
+a li {
+    transition: all 0.5s ease;
+    transform-origin: center;
+    color:white;
+    font-size: 30px;
+}
+
+a:hover li {
+    transform: translateY(-2px);
+    color: rgb(106, 218, 233);
+}
+
+.reserv-btn {
+    background-color: aliceblue;
+    color: rgb(0, 80, 145);
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 10px;
+    display: inline-block;
+    margin-right: 50px;
+    margin-left: -105px;
+    margin-top:-10px;
+    transition: all 0.5s ease;
+    transform-origin: center;
+    font-size: 30px;
+}
+
+.reserv-btn:hover {
+    transform: scale(1.10);
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+
+.learn1-btn {
+    color: rgb(255, 255, 255);
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 10px;
+    display: inline-block;
+    margin-right: 50px;
+    
+    margin-top:-10px;
+    transition: all 0.5s ease;
+    transform-origin: center;
+    font-size: 30px;
+}
+
+.learn1-btn:hover {
+    transform: scale(1.10);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 80, 145);
+}
+
+#title ul {
+    flex-direction: row;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+#title {
+    margin-left: -15px;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+}
+
+.logo {
+    width: 100px;
+    
+}
+
+h1 {
+    font-weight: 200;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+aside {
+    max-width: 50%;
+}
+
+.placas {
+    width: 600px;
+    max-width: none;
+    z-index: 2;
+}
+
+article {
+    width: 55%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -200px;
+    position: relative;
+}
+
+article::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 105px;
+    width: 400px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.4);
+    filter: blur(25px);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.text {
+    margin-left: -105px;
+    font-size: 52px;
+    font-family: poppinslight;
+    line-height: 1.5;
+    width: 900px;
+}
