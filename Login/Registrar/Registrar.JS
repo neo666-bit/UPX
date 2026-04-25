@@ -1,18 +1,25 @@
 async function verificarSenha() {
     const senha = document.querySelector("#senha").value;
     const confirmar = document.querySelector("#confirmar-senha").value;
-
-    if (senha !== confirmar) {
-        document.querySelector(".ConfirmarSenha").style.border = "#F22E3B 2px solid"
-        document.querySelector(".Senha").style.border = "#F22E3B 2px solid"
-        return
+    const email = document.querySelector("#email").value;
+    if(email == ""){
+        document.querySelector(".Email").style.border = "#F22E3B 2px solid"
+        document.querySelector(".Mensagem").textContent = "ERRO! Usuário não é válido"
 
     } else {
-        document.querySelector(".ConfirmarSenha").style.border = "none"
-        await registrar();
-        alert("Registro Criado")
-        window.location.href = "../Login.html";
+        if (senha !== confirmar) {
+            document.querySelector(".ConfirmarSenha").style.border = "#F22E3B 2px solid"
+            document.querySelector(".Senha").style.border = "#F22E3B 2px solid"
+            document.querySelector(".Mensagem").textContent = "ERRO! Senhas Divergentes"
+            return
 
+        } else {
+            document.querySelector(".ConfirmarSenha").style.border = "none"
+            alert("Registro Criado")
+            await registrar();
+            window.location.href = "../Login.html";
+
+        }
     }
 }
 

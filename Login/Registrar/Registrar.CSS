@@ -198,7 +198,7 @@ article::after {
     cursor: pointer ;
     background: rgba(211, 211, 211, 0.418);
     transition: all 1s;
-    margin: 10px;
+    margin: 8px;
 }
 
 .Email:focus, .Senha:focus, .ConfirmarSenha:focus{
@@ -215,9 +215,11 @@ article::after {
 
 input{
     all: unset;
-    color: #7AD8F0;
+    color: #000506;
     font-size: 18px;
     font-family: poppinsregular;
+    width: 100%;
+    background-color: transparent;
 
 }
 
@@ -237,6 +239,7 @@ input::placeholder{
     font-family: poppinsregular;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
     transition: all 1s;
+    margin-bottom: 15px;
 }
 
 #loginButton{
@@ -272,4 +275,25 @@ input::placeholder{
 
 .Registrar:hover{
     text-shadow: 0 0 5px rgba(42, 47, 49, 0.8);
+}
+
+
+.Mensagem{
+    color: red ;
+    font-family: poppinsregular;
+    font-size: 18px;
+    margin: -12px;
+    transition: 0.5s all ease;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    /* Define uma sombra interna enorme com a cor transparente */
+    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+    
+    /* Previne que o navegador mude a cor do fundo */
+    -webkit-text-fill-color: #000; /* Define a cor do texto */
+    transition: background-color 5000s ease-in-out 0s;
 }
