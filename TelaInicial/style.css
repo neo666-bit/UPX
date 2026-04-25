@@ -13,6 +13,17 @@ body {
     display: flex;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none;
+    color: white;
+}
+
+/*Logo e nome do projeto---------------------------------*/
 #upx-name{
     margin: 10px;
     margin-bottom: -10px;
@@ -22,18 +33,21 @@ body {
 
 #upx-name p {
     font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 .logo {
     margin-top: 10px;
-    width: 100px;
-    height: 60px;
+    width: 70px;
+    height: 40px;
     object-fit: cover;
 }
 
+/*Barra lateral------------------------------------------*/
 #sidebar {
     background-color: rgba(255, 255, 255, 0.153);
-    border-right: rgba(255, 255, 255, 0.475) 1px solid;
+    
     
     display: flex;
     flex-direction: column;
@@ -59,23 +73,46 @@ body {
     padding: 10px;    
 }
 
-a {
-    text-decoration: none;
+/*Header-------------------------------------------------*/
+
+header {
+   background-color: rgba(255, 255, 255, 0.153);
+   height: 90px;
+   
+   margin-top: -20px;
 }
 
-li {
-    list-style: none;
+#header-items {
+    font-size: 20px;
+    
+
+    height: 60px;
+    margin-left: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
 }
+/*Main---------------------------------------------------*/
 
 main {
+    background-color: transparent;
+    border-top:rgba(255, 255, 255, 0.475) 1px solid;
+    border-left:rgba(255, 255, 255, 0.475) 1px solid;
+    border-radius: 8px 0px;
+
     display: flex;
     padding: 20px;
+    
+    height: 841px;
 }
 
 #controle-economia {
     background-color: rgba(255, 255, 255, 0.153);
     border: rgba(255, 255, 255, 0.475) 1px solid;
     border-radius: 8px;
+    
     width: 600px;
 }
 
