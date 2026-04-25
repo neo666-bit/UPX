@@ -1,8 +1,8 @@
 body {
     background: 
-        radial-gradient(circle at 75% 25%, rgba(24,129,209,0.5), transparent 50%),
-        radial-gradient(circle at 20% 80%, rgba(0,80,145,0.2), transparent 60%),
-        #000c14;
+        radial-gradient(circle at 75% 25%, rgba(24, 141, 231, 0.5), transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(1, 100, 180, 0.2), transparent 60%),
+        #00243c;
     background-attachment: fixed;
 
     color: white;
@@ -70,7 +70,15 @@ li {
     color: white;
 
     display: block;
-    padding: 10px;    
+    padding: 10px;
+    
+    transition: 0.3s ease;
+}
+
+#sidebar-items a:hover {
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.488);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.322);
 }
 
 /*Header-------------------------------------------------*/
@@ -87,12 +95,18 @@ header {
     
 
     height: 60px;
-    margin-left: 220px;
+    margin-right: 20px;
 
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    gap: 30px;
     
+}
+
+#header-items li {
+    margin-top: 30px;
 }
 /*Main---------------------------------------------------*/
 
@@ -116,6 +130,12 @@ main {
     width: 600px;
 }
 
+#controle-economia p {
+    font-size: 30px;
+    margin: 5px;
+    margin-bottom: -15px;
+}
+
 #controle-items {
     display: flex;
     flex-direction: column;
@@ -130,8 +150,17 @@ main {
     color: white;
 
     display: block;
-    padding: 10px;  
+    padding: 10px;
+
+    transition: 0.3s ease;
 }
+
+#controle-items span:hover {
+    transform: scale(1.01);
+    background-color: rgba(255, 255, 255, 0.488);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.322);
+}
+
 
 #grafico-economia {
     background-color: rgba(255, 255, 255, 0.153);
@@ -142,4 +171,11 @@ main {
     
     margin-left: 20px;
 }
+
+#grafico-economia p {
+    font-size: 30px;
+    margin: 5px;
+    margin-bottom: -15px;
+}
+
 
