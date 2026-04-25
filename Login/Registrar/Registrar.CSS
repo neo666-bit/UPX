@@ -207,7 +207,7 @@ article::after {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-.Email:focus-within, .Senha:focus-within{
+.Email:focus-within, .Senha:focus-within, .ConfirmarSenha:focus-within{
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
@@ -254,7 +254,7 @@ input::placeholder{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 0px;
 }
 
 #loginButton:hover {
