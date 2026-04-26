@@ -4,7 +4,7 @@ body {
     background-image: url("../components/Images/BG-TelaInicial.jpg");
 
     
-    background-color: rgba(0, 0, 0, 0.667);
+    background-color: rgba(0, 0, 0, 0.763);
     backdrop-filter: blur(5px);
     background-blend-mode: multiply; 
 
@@ -144,7 +144,7 @@ main {
     display: flex;
     padding: 20px;
     
-    height: 830px;
+    height: 990px;
 }
 
 /*Controle de gastos-------------------------------------*/
@@ -157,6 +157,7 @@ main {
     border-radius: 8px;
     
     width: 600px;
+    margin-bottom: 170px;
 }
 
 #controle-economia p {
@@ -228,6 +229,7 @@ main {
     width: 925px;
     
     margin-left: 20px;
+    margin-bottom: 170px;
 }
 
 #grafico-economia p::after {
