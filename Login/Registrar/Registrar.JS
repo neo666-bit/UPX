@@ -17,7 +17,7 @@ async function verificarSenha() {
             document.querySelector(".ConfirmarSenha").style.border = "none"
             alert("Registro Criado")
             await registrar();
-            window.location.href = "../Login.html";
+            // window.location.href = "../Login.html";
 
         }
     }
@@ -28,27 +28,24 @@ async function registrar() {
     const email = document.querySelector("#email").value.toLowerCase();
     const senha = document.querySelector("#senha").value;
 
-    const check = await fetch(`https://69ec4ad897482ad5c528424e.mockapi.io/usuario?email=${email}`);
-    const existe = await check.json();
+    // Busca todos os usuários
+    const resposta = await fetch("https://69ec4ad897482ad5c528424e.mockapi.io/usuario");
+    const todosUsuarios = await resposta.json();
 
-    if (existe.length > 0) {
+    // Filtra manualmente pelo email dentro do JavaScript
+    const emailEncontrado = todosUsuarios.find(usuario => usuario.email === email);
+
+    if (emailEncontrado) {
         alert("Email já cadastrado!");
         return;
     }
 
-    console.log({
-    email: email,
-    password: senha
-});
+    // Se não encontrou, prossegue com o POST
     await fetch("https://69ec4ad897482ad5c528424e.mockapi.io/usuario", {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            email: email,
-            password: senha
-        })
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email, password: senha })
     });
-
+    
+    alert("Usuário criado com sucesso!");
 }
