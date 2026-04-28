@@ -19,36 +19,36 @@
         
         <ul id="sidebar-items">
             <li>
-                <a href="#">
-                    <i class="bi bi-person-circle"></i>
-                    <span>Perfil</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
+                <a href="/TelaInicial/Pages/economia.html">
                     <i class="bi bi-bar-chart-fill"></i>
                     <span>Economia</span>
                 </a>
                 
             </li>
             <li>
-                <a href="#">
+                <a href="/TelaInicial/Pages/relatorio.html">
                     <i class="bi bi-journal-text"></i>
                     <span>Relatório</span>
                 </a>
                 
             </li>
             <li>
-                <a href="#">
+                <a href="/TelaInicial/Pages/placas.html">
                     <i class="bi bi-sun-fill"></i>
                     <span>Placas</span>
                 </a>
                 
             </li>
             <li>
-                <a href="#">
+                <a href="/TelaInicial/Pages/configurar.html">
                     <i class="bi bi-house-gear-fill"></i>
                     <span>Configurar</span>
+                </a>
+            </li>
+            <li>
+                <a href="/TelaInicial/Pages/perfil.html">
+                    <i class="bi bi-person-circle"></i>
+                    <span>Perfil</span>
                 </a>
             </li>
         </ul>
@@ -72,75 +72,24 @@
         </header>
 
         <main>
-            <div id="controle-economia">
-                <p>Controle de gastos</p>
-                <div class="scroll">
-
-                    <ul id="controle-items">
-                        <li>
-                            <span>Item 1</span>
-                        </li>
-                        <li>
-                            <span>Item 2</span>
-                        </li>
-                        <li>
-                            <span>Item 3</span>
-                        </li>
-                        <li>
-                            <span>Item 4</span>
-                        </li>
-                        <li>
-                            <span>Item 5</span>
-                        </li>
-                        <li>
-                            <span>Item 5</span>
-                        </li>
-                        <li>
-                            <span>Item 5</span>
-                        </li>
-                        <li>
-                            <span>Item 5</span>
-                        </li>
-                        <li>
-                            <span>Item 5</span>
-                        </li>
-                        <li>
-                            <span>Item 5</span>
-                        </li>
-                        <li>
-                            <span>Item 5</span>
-                        </li>
-                        <li>
-                            <span>Item 5</span>
-                        </li>
-                        <li>
-                            <span>Item 5</span>
-                        </li>
-                        <li>
-                            <span>Item 5</span>
-                        </li>
-                        <li>
-                            <span>Item 5</span>
-                        </li>
-                        <li>
-                            <span>Item 5</span>
-                        </li>
-                        <li>
-                            <span>Item 5</span>
-                        </li>
-                        <li>
-                            <span>Item 5</span>
-                        </li>
-                    </ul>
-                </div>
-                
-            </div>
-            <div id="grafico-economia">
-                <p>Visualização</p>
-                <img src=" " alt=" ">
-            </div>
+            
         </main>
 
     </div>
 </body>
+<script>
+    let links = document.querySelectorAll('a');
+    for (let i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function(event) {
+            event.preventDefault();
+            let url = this.getAttribute('href');
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('main').innerHTML = data;
+                })
+        
+        });
+    }
+</script>
 </html>
