@@ -91,6 +91,11 @@ li {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.322);
 }
 
+#sidebar-items a.active {
+    background-color: rgba(255, 255, 255, 0.488);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.322);
+}
+
 /*Container----------------------------------------------*/
 .container {
     display: flex;
@@ -147,9 +152,9 @@ main {
     height: 990px;
 }
 
-/*Controle de gastos-------------------------------------*/
+/*adicionar ---------------------------------------------*/
 
-#controle-economia {
+#adicionar-economia {
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -160,25 +165,28 @@ main {
     margin-bottom: 170px;
 }
 
-#controle-economia p {
+#adicionar-economia p {
     font-size: 30px;
     margin: 5px;
     margin-bottom: -15px;
     
 }
 
-#controle-economia > p::before,
-#grafico-economia > p::before {
+#adicionar-economia > p::before,
+#andamento-economia > p::before,
+#config-configurar > p::before,
+.esquerda-perfil > p::before,
+#visualizar-relatorio > p::before {
     content: "╭ ";
 }
  
-#controle-economia > p::after {
+#adicionar-economia > p::after {
     content: " ─────────────";
     letter-spacing: -1px;
 }
 
 
-#controle-items {
+#adicionar-items {
     display: flex;
     flex-direction: column;
 
@@ -186,7 +194,7 @@ main {
     padding: 5px;
 }
 
-#controle-items span {
+#adicionar-items span {
     background-color: rgba(255, 255, 255, 0.169);
     border-radius: 8px;
     border:rgba(255, 255, 255, 0.475) 1px solid;
@@ -199,7 +207,7 @@ main {
     transition: 0.3s ease;
 }
 
-#controle-items span:hover {
+#adicionar-items span:hover {
     transform: scale(1.01);
     background-color: rgba(255, 255, 255, 0.488);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.322);
@@ -217,33 +225,155 @@ main {
     margin-top: 10px;
 }
 
-/*Grafico------------------------------------------------*/
+/*andamento------------------------------------------------*/
 
-#grafico-economia {
+#andamento-economia {
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: rgba(255, 255, 255, 0.475) 1px solid;
     border-radius: 8px;
 
-    width: 925px;
+    width: 960px;
     
     margin-left: 20px;
     margin-bottom: 170px;
 }
 
-#grafico-economia p::after {
+#andamento-economia p::after {
     content: " ────────────────────────────────";
     flex: 1;
     height: 2px;
 }
 
-#grafico-economia p {
+#andamento-economia p {
     font-size: 30px;
     margin: 5px;
     margin-bottom: -15px;
 }
 
+/*Visualizar---------------------------------------------*/
 
+#config-configurar {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: rgba(255, 255, 255, 0.475) 1px solid;
+    border-radius: 8px;
 
+    width: 1580px;
+    margin-bottom: 170px;
+}
 
+#config-configurar p::after {
+    content: " ────────────────────────────────";
+    flex: 1;
+    height: 2px;
+}
+
+#config-configurar p {
+    font-size: 30px;
+    margin: 5px;
+    margin-bottom: -15px;
+}
+
+/*Configurar---------------------------------------------*/
+
+#visualizar-relatorio {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: rgba(255, 255, 255, 0.475) 1px solid;
+    border-radius: 8px;
+
+    width: 1580px;
+    margin-bottom: 170px;
+}
+
+#visualizar-relatorio p::after {
+    content: " ────────────────────────────────";
+    flex: 1;
+    height: 2px;
+}
+
+#visualizar-relatorio p {
+    font-size: 30px;
+    margin: 5px;
+    margin-bottom: -15px;
+}
+
+/*Perfil-------------------------------------------------*/
+
+#personalizar-perfil {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: rgba(255, 255, 255, 0.475) 1px solid;
+    border-radius: 8px;
+
+    display: flex;
+    width: 1580px;
+    margin-bottom: 170px;
+}
+
+#personalizar-perfil p {
+    font-size: 30px;
+    margin: 5px;
+    margin-bottom: -15px;
+    
+}
+
+#personalizar-perfil p::after {
+    content: " ────────────────────────────────";
+    flex: 1;
+    height: 2px;
+}
+
+#personalizar-perfil p {
+    font-size: 30px;
+    margin: 5px;
+    margin-bottom: -15px;
+}
+
+.esquerda-perfil {
+    display: flex;
+    flex-direction: column;
+}
+
+.esquerda-perfil i {
+    font-size: 300px;
+    margin-left: 40px;
+}
+
+.esquerda-perfil a {
+    position: absolute;
+    margin-top: 450px;
+    margin-left: 120px;
+
+    border: rgba(255, 255, 255, 0.475) 1px solid;
+    border-radius: 8px;
+
+    padding: 5px;
+    transition: all 0.1s ease;
+}
+
+.esquerda-perfil a:hover {
+    background-color: rgba(255, 255, 255, 0.488);
+    border: rgb(255, 255, 255) 1px solid;
+}
+
+.direita-perfil {
+    display: flex;
+    align-items: center;
+    justify-content: ceenter;
+}
+
+.direita-perfil form {
+}
+
+.direita-perfil label {
+
+}
+.direita-perfil input {
+    
+}
