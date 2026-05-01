@@ -7,11 +7,13 @@ async function login() {
         const data = await res.json();
 
         if (data.length > 0 && data[0].password === senha) {
+            const usuarioId = data[0].id;
             alert("Login realizado!");
 
             localStorage.setItem("usuarioLogado", email);
+            localStorage.setItem("usuarioId", usuarioId);
 
-            window.location.href = "../TelaInicial/Index.html";
+            window.location.href = "../TelaInicial/index.html";
 
         } else {
             alert("Email ou senha incorretos");

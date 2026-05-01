@@ -17,7 +17,7 @@ async function verificarSenha() {
             document.querySelector(".ConfirmarSenha").style.border = "none"
             alert("Registro Criado")
             await registrar();
-            // window.location.href = "../Login.html";
+            window.location.href = "../Login.html";
 
         }
     }
