@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="economia.css">
-        <link rel="stylesheet" href="..//../components/fonts/stylesheet.css">
-        <title>Economia</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ecnonomia.css">
+    <link rel="stylesheet" href="..//../components/fonts/stylesheet.css">
+    <title>Document</title>
+</head>
 <body>
-<div id="adicionar-economia">
-    <div class="scroll">
-        <ul id="adicionar-items">
-            <li><span>Item 1</span></li>
-            <li><span>Item 2</span></li>
-            <li><span>Item 3</span></li>
-            <li><span>Item 4</span></li>
-            <li><span>Item 5</span></li>
-            <li><span>Item 6</span></li>
-        </ul>
-    </div>   
-</div>
-
-        <div id="andamento-economia">
-            <p class="card-title">Andamento</p>
-            <img src=" " alt=" ">
-        </div>
-    </body>
+    <div id="adicionar-economia">
+        <p>Adionar itens</p>
+        <div class="duvida"><i class="bi bi-question"></i></div>
+            <ul id="adicionar-items">
+                <div class="duvida"><i class="bi bi-question"></i></div>
+                <div class="Container-perguntas">
+                    <select class="custom-select">
+                        <option value="" disabled selected hidden>Selecione um dispositivo</option>
+                        <option value="Geladeira">Geladeira</option>
+                        <option value="Forno">Forno</option>
+                        <option value="Micro-ondas">Micro-ondas</option>
+                        <option value="Air-Fryer">Air-Fryer</option>
+                        <option value="Televisão">Televisão</option>
+                        <option value="Ar-Condicionado">Ar-Condicionado</option>
+                        <option value="Ferro de Passar">Ferro de Passar</option>
+                        <option value="Chuveiro Elétrico">Chuveiro Elétrico</option>
+                        <option value="Maquina De Lavar">Maquina De Lavar</option>
+                        <option value="Computador">Computador</option>
+                        <option value="">Outro</option>
+                    </select>
+                    <button class="Adicionar" onclick="adicionarDispositivos()"><i class="bi bi-plus"></i></button>
+                    <button class="AdicionarValor" onclick="pegarValores()"><i class="bi bi-plus"></i></button>
+                    <input type="number" placeholder="Média de gasto em Reais" class="input">
+                    <input type="text" placeholder="Digite o 'Outro' dispositivo" class="Outro">
+                    <input type="numer" placeholder="Média de Consumo do dispositivo(kW)" class="OutroCons">
+                            
+            </div>   
+    </div>
+</body>
+<script src="script/AdicionarDispositivos.JS"></script>
 </html>
