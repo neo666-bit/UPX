@@ -11,7 +11,6 @@ const consumoMedio = {
     "Computador": 30
 };
 
-
 var KwAtual;
 
 async function pegarValores(){
@@ -58,16 +57,19 @@ async function adicionarDispositivos(){
     const select = document.querySelector(".custom-select");
     const inputOutro = document.querySelector(".Outro");
 
-    let nomeDispositivo;
+let nomeDispositivo;
+let consumo;
 
-    if (select.value === "Outro") {
-        nomeDispositivo = inputOutro.value;
-    } else {
-        nomeDispositivo = select.value;
-    }
+if (select.value === "Outro") {
+    nomeDispositivo = inputOutro.value;
 
+    const inputConsumo = document.querySelector(".OutroCons");
+    consumo = Number(inputConsumo.value); // 👈 valor digitado
 
-    let consumo = consumoMedio[nomeDispositivo];
+} else {
+    nomeDispositivo = select.value;
+    consumo = consumoMedio[nomeDispositivo] || 0;
+}
 
 
     if (!consumo) {
