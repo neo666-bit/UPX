@@ -177,12 +177,11 @@ main {
 
 }
 
-.custom-select, .Estado, .input, .OutroCons{
+.custom-select, .input, .OutroCons{
     width: auto;
     padding: 25px;
     border: rgba(255, 255, 255, 0.475) 1px solid;
-    border-radius: 8px;
-
+    border-radius: 40px;
     border: none;
     background-color: rgba(255, 255, 255, 0.8);
     font-size: 18px;
@@ -195,11 +194,21 @@ main {
 }
 
 .custom-select:hover, .input:hover, .Outro:hover, .OutroCons:hover{
-    
+    background-color: white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .input::placeholder, .Outro::placeholder, .OutroCons::placeholder{
     color: black;
+}
+
+.custom-select:focus, .input:focus, .Outro:focus, .OutroCons:focus{
+    background-color: white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .duvida{
@@ -219,8 +228,8 @@ main {
     height: 30px;
     font-size:20px;
     background-color: white;
-    top: 175px;
-    left: 245px;
+    top: 70px;
+    left: 251px;
     border-radius: 40px;
     font-size: 25px;
     display: flex;
@@ -236,12 +245,26 @@ main {
     background-color: black;
 }
 
-
-.Outro{
+.AdicionarValor{
     position: absolute;
+    width: 30px;
+    height: 30px;
+    font-size:20px;
+    background-color: white;
+    top: 70px;
+    left: 540px;
+    border-radius: 40px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid;
+    transition: 0.5s ease;
+}
+.Outro{
     width: auto;
     padding: 25px;
-    border-radius: 30px;
+    border-radius: 40px;
     border: none;
     background-color: rgba(255, 255, 255, 0.8);
     font-size: 18px;
@@ -250,18 +273,67 @@ main {
     transition: all 1s;
     margin: 8px;
     color: black;
-    transition: 0.5s ease;
-    top: 230px;
-    left: 0px;    
-    visibility: hidden;
+    transition: 0.5s ease; 
+    visibility:hidden;
 }
 
 .OutroCons{
-    width: 350px;
-    position:absolute;
-    top: 315px;
-    left: 0px;
+    width: 230px;
+    position: absolute;
+    top: 40px;
     visibility: hidden;
+}
+.RemoverDispositivos{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    font-size:20px;
+    background-color: rgba(255, 255, 255, 0.297);
+    top: 85px;
+    left: 1000px;
+    border-radius: 40px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid;
+    transition: 0.5s ease;
+    font-size: 15px;
+}
+
+.RemoverDispositivos:hover{
+    background-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+#lista {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 1173px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+}
+
+#lista div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+
+#lista button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
 }
 
 .AdicionarValor:hover{
@@ -398,4 +470,20 @@ main {
 }
 .direita-perfil input {
     
+}
+
+
+
+
+
+/* Remove as setas no Chrome, Edge, Safari e Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove as setas no Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
 }

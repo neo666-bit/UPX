@@ -273,3 +273,9 @@ input::placeholder{
 .Registrar:hover{
     text-shadow: 0 0 5px rgba(42, 47, 49, 0.8);
 }
+
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
