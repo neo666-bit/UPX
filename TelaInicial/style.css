@@ -149,7 +149,7 @@ main {
     overflow-y: auto;  
 }
 
-/*╭ title*/
+/*╭ title -------*/
 #adicionar-economia > p::before,
 #andamento-economia > p::before,
 #config-configurar > p::before,
@@ -158,7 +158,7 @@ main {
     content: "╭ ";
 }
 
-/*Economia-Page*/
+/*Economia Page ----------------*/
 
 #adicionar-economia {
     background: rgba(255, 255, 255, 0.12);
@@ -350,10 +350,11 @@ main {
 }
 
 #adicionar-economia > p::after {
-    content: " ─────────────";
+    content: " ──────────────────────────";
     letter-spacing: -1px;
 }
 
+/*Configurar Page --------------*/
 #config-configurar {
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(15px);
@@ -365,7 +366,7 @@ main {
 }
 
 #config-configurar p::after {
-    content: " ────────────────────────────────";
+    content: " ───────────────────────";
     flex: 1;
     height: 2px;
 }
@@ -376,6 +377,7 @@ main {
     margin-bottom: -15px;
 }
 
+/*Relatório Page ---------------*/
 #visualizar-relatorio {
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(15px);
@@ -387,7 +389,7 @@ main {
 }
 
 #visualizar-relatorio p::after {
-    content: " ────────────────────────────────";
+    content: " ────────────────────────────";
     flex: 1;
     height: 2px;
 }
@@ -398,6 +400,7 @@ main {
     margin-bottom: -15px;
 }
 
+/*Perfil Page ------------------*/
 
 #personalizar-perfil {
     background: rgba(255, 255, 255, 0.12);
@@ -408,13 +411,6 @@ main {
 
     display: flex;
     width: 1580px;
-}
-
-#personalizar-perfil p {
-    font-size: 30px;
-    margin: 5px;
-    margin-bottom: -15px;
-    
 }
 
 #personalizar-perfil p::after {
@@ -435,14 +431,14 @@ main {
 }
 
 .esquerda-perfil i {
-    font-size: 300px;
-    margin-left: 40px;
+    font-size: 400px;
+    margin-left: 90px;
 }
 
 .esquerda-perfil a {
     position: absolute;
-    margin-top: 450px;
-    margin-left: 120px;
+    margin-top: 560px;
+    margin-left: 230px;
 
     border: rgba(255, 255, 255, 0.475) 1px solid;
     border-radius: 8px;
@@ -459,22 +455,31 @@ main {
 .direita-perfil {
     display: flex;
     align-items: center;
-    justify-content: ceenter;
+    justify-content: center;
 }
 
 .direita-perfil form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 20px;
+    width: 400px;
+    zoom: 2;
 }
 
-.direita-perfil label {
-
-}
 .direita-perfil input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.grupo-perfil {
+    display: flex;
+    flex-direction: column;
     
 }
 
-
-
-
+.grupo-endereco {
+    grid-column: 1 / -1;
+}
 
 /* Remove as setas no Chrome, Edge, Safari e Opera */
 input[type="number"]::-webkit-inner-spin-button,

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Perfil</title>
 </head>
 <body>
     <div id="personalizar-perfil">
@@ -16,34 +16,88 @@
 
         <div class="direita-perfil">
             <form>
-                <div class="btn1-perfil">
-                    
+                
+                <div class="grupo-perfil">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome">
                 </div>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome">
 
-                <label for="nome">Sobrenome:</label>
-                <input type="text" id="sobrenome" name="sobrenome">
-                <br>
-                <label for="nome">Telefone:</label>
-                <input type="text" id="telefone" name="telefone">
+                <div class="grupo-perfil">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep">
+                </div>
                 
-                <label for="nome">Email:</label>
-                <input type="text" id="email" name="email">
-                <br>
-                <label for="nome">Endereço da residência:</label>
-                <input type="text" id="Rua" name="Rua">
-                <br>
-                
-                <label for="nome">Cidade:</label>
-                <input type="text" id="cidade" name="cidade">
+                <div class="grupo-perfil">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" maxlength="15" inputmode="numeric">
+                </div>
 
-                <label for="nome">Estado:</label>
-                <input type="text" id="estado" name="estado">
+                <div class="grupo-perfil">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                
+                <div class="grupo-perfil grupo-endereco">
+                    <label for="Rua">Endereço da residência:</label>
+                    <input type="text" id="Rua" name="Rua">
+                </div>
+
+                <div class="grupo-perfil">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade">
+                </div>
+
+                <div class="grupo-perfil">
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado">
+                        <option value="" disabled selected>Selecione</option>
+
+                        <optgroup label="Norte">
+                            <option value="AC">Acre</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="PA">Pará</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="TO">Tocantins</option>
+                        </optgroup>
+
+                        <optgroup label="Nordeste">
+                            <option value="AL">Alagoas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="SE">Sergipe</option>
+                        </optgroup>
+
+                        <optgroup label="Centro-Oeste">
+                            <option value="DF">Distrito Federal</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MT">Mato Grosso</option>
+                        </optgroup>
+
+                        <optgroup label="Sudeste">
+                            <option value="ES">Espírito Santo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="SP">São Paulo</option>
+                        </optgroup>
+
+                        <optgroup label="Sul">
+                            <option value="PR">Paraná</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="SC">Santa Catarina</option>
+                        </optgroup>
+                    </select>
+                </div>
+
             </form>
-            
         </div>
     </div>
-    
 </body>
 </html>
