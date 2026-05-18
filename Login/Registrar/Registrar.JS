@@ -28,11 +28,9 @@ async function registrar() {
     const email = document.querySelector("#email").value.toLowerCase();
     const senha = document.querySelector("#senha").value;
 
-    // Busca todos os usuários
     const resposta = await fetch("https://69ec4ad897482ad5c528424e.mockapi.io/usuario");
     const todosUsuarios = await resposta.json();
 
-    // Filtra manualmente pelo email dentro do JavaScript
     const emailEncontrado = todosUsuarios.find(usuario => usuario.email === email);
 
     if (emailEncontrado) {
