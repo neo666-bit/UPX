@@ -64,7 +64,7 @@ if (select.value === "Outro") {
     nomeDispositivo = inputOutro.value;
 
     const inputConsumo = document.querySelector(".OutroCons");
-    consumo = Number(inputConsumo.value); // 👈 valor digitado
+    consumo = Number(inputConsumo.value); 
 
 } else {
     nomeDispositivo = select.value;

@@ -27,6 +27,9 @@ async function verificarSenha() {
 async function registrar() {
     const email = document.querySelector("#email").value.toLowerCase();
     const senha = document.querySelector("#senha").value;
+    const estado = document.querySelector("#estado").value;
+    const telefone = document.querySelector("#Telefone").value
+    const nome = document.querySelector("#nome").value
 
     const resposta = await fetch("https://69ec4ad897482ad5c528424e.mockapi.io/usuario");
     const todosUsuarios = await resposta.json();
@@ -42,7 +45,7 @@ async function registrar() {
     await fetch("https://69ec4ad897482ad5c528424e.mockapi.io/usuario", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email, password: senha })
+        body: JSON.stringify({ email: email, password: senha, estado: estado, telefone: telefone, nome: nome })
     });
     
     alert("Usuário criado com sucesso!");
